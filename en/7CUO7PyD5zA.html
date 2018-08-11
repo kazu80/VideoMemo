@@ -1,0 +1,955 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>7CUO7PyD5zA(en)</title></head>
+<body style="width:100%;line-height:150%;">
+<div style="width:980px;margin:auto;">
+    <a href="https://www.youtube.com/watch?v=7CUO7PyD5zA" target="_blank">https://www.youtube.com/watch?v=7CUO7PyD5zA</a>
+    <br>
+    <br>
+    [MUSIC PLAYING] KEVIN SCHAAF: All right.<br>
+    Hello, everyone.<br>
+    Thank you for coming out.<br>
+    We have a jam-packed
+    talk for you, so let&#39;s get started.<br>
+    My name is Kevin Schaaf.<br>
+    STEVE ORVELL: And I&#39;m Steve Orvell.<br>
+    KEVIN
+    SCHAAF: And we&#39;re both the lead engineers on the Polymer library.<br>
+    And we also do a lot of coordinating and
+    planning on the project as a whole, so the two of us spend a lot of time together.<br>
+    STEVE ORVELL: Yeah, in fact we
+    work so closely together that instead of calling us Steve and Kevin, some people just call us
+    &quot;Stevin.&quot;<br>
+    KEVIN SCHAAF: Yeah, we&#39;re kind of interchangeable like that.<br>
+    Although, Steve is the
+    one who talks like way too much and uses all kinds of crazy analogies that don&#39;t make any sense, goes on and on
+    and on.<br>
+    STEVE ORVELL: Yeah, well, this guy, he doesn&#39;t even like science fiction.<br>
+    So it&#39;s impossible
+    to find an analogy that he even understands.<br>
+    KEVIN SCHAAF: All right, all right.<br>
+    Well today, in this talk, we&#39;re
+    going to go through where we&#39;re at with web components and the Polymer library.<br>
+    STEVE ORVELL: And then, we&#39;re
+    going to cover where we&#39;re taking the Polymer Project in the future.<br>
+    KEVIN SCHAAF: And then, finally, we&#39;re
+    going to talk about where we&#39;re going to help evolve the web platform forward to make it even better for us
+    developers.<br>
+    STEVE ORVELL: All right, so let&#39;s talk a bit about web components and Polymer.<br>
+    The Polymer
+    Project started as an experiment to embed web developers right inside the Chrome team.<br>
+    And the goal was to
+    tighten the feedback loop between developers building on the web and engineers implementing the browsers.<br>
+    KEVIN
+    SCHAAF: So the experiment turned into a full-fledged project focused on identifying developer needs and
+    participating in the standards process to address those needs and bring them to the browser.<br>
+    We also produced
+    polyfills and libraries to encourage the use of these new features, all with the goal of driving the web platform
+    forward, to make it more capable for us developers so that we can all deliver better experiences to our users.<br>
+    STEVE
+    ORVELL: This all started almost six years ago now when Alex Komorowske and Dimitri Glaskov got up here at Google I/O
+    in 2012, and they talked about how web development at that time was really difficult.<br>
+    It was overwhelming how
+    much developers had to work around the limitations in the platform and write a lot of code for really basic
+    concepts, like breaking down your application into components.<br>
+    KEVIN SCHAAF: They did this whole schtick about
+    how they were these engineers coming back from the future.<br>
+    And they were coming back to report that all these
+    problems were solved and that the web platform had become a really awesome capable platform for building
+    applications.<br>
+    They told us about these new things called web components, native web platform APIs to help us
+    create components for structuring our applications and building reusable widgets.<br>
+    And the components were built
+    on a handful of new features in the browser.<br>
+    STEVE ORVELL: The first feature they told us about was custom
+    elements, which let us extend HTML and make our own elements work the same way that the browser&#39;s built-in ones
+    do, like inputs and buttons.<br>
+    And this meant custom elements would work anywhere the web works, regardless of how
+    you&#39;re building your app.<br>
+    KEVIN SCHAAF: Next, Shadow DOM let custom elements hide their rendering so that you
+    could create complex UI in a component that was fully encapsulated, including its styling, so you no longer had to
+    contend with this global soup of CSS and come up with conventions on your team to avoid stomping on each other&#39;s
+    selectors, that sort of thing.<br>
+    STEVE ORVELL: And last, they proposed a new way to load those custom element
+    definitions called html imports and the rendering for your component would just be described declaratively in html
+    email and then loaded and parsed natively by the browser.<br>
+    KEVIN SCHAAF: Dimitri and Alex put all these things
+    together into this awesome story about an amazing future, where you could mix and match components from different
+    authors on the same page.<br>
+    And this was because the rules for coordination were no longer convention that everyone
+    had to agree on.<br>
+    They were built into the browser.<br>
+    STEVE ORVELL: And that would allow an ecosystem of
+    interoperable widget libraries, meaning everyone could stop reinventing that same date picker component over and
+    over again.<br>
+    And since web components were built on top of html, we got a declarative format for describing
+    components for free.<br>
+    KEVIN SCHAAF: Yeah, that sounded like a really awesome future six years ago when they told
+    us about it.<br>
+    So what&#39;s happened since then?<br>
+    STEVE ORVELL: Well, it&#39;s been a bit of a long road, but
+    web components became a real thing.<br>
+    And frankly, most of what they predicted actually became true.<br>
+    The vast
+    majority of web users have native web components running on their devices right now.<br>
+    KEVIN SCHAAF: Every one of
+    you has a phone that runs native web components, it&#39;s true.<br>
+    STEVE ORVELL: Yup.<br>
+    There&#39;s a thriving
+    ecosystem of components on webcomponents.org.<br>
+    And most JavaScript frameworks today work great with web
+    components, as you can see on custom elements everywhere, a site that tracks framework compatibility with custom
+    elements.<br>
+    So the promise of one component model that works everywhere really has come true.<br>
+    KEVIN SCHAAF: And
+    of course, lots of developers are already reaping all of the benefits that Dimitri and Alex talked about.<br>
+    There
+    is a lot of big sites right here within Google that are all in on web components.<br>
+    STEVE ORVELL: And some
+    companies, like Electronic Arts, Coca-Cola, and USA Today are using components to ship really great experiences.<br>
+    And
+    those Google companies, you better tell us what those are.<br>
+    KEVIN SCHAAF: Right, so YouTube, Chrome, and Google
+    Earth are all all-in on web components.<br>
+    So all of these brands and sites have invested in web components to help
+    them reach users on every corner of the earth.<br>
+    And that&#39;s the amazing thing about the web.<br>
+    It&#39;s what
+    gets Steve and I out of bed in the morning, is the fact that it&#39;s this one platform that reaches every user on
+    the earth.<br>
+    So a ton of people are using web components, and that future that Dimitri and Alex talked about back
+    in 2012 really has come true.<br>
+    STEVE ORVELL: OK, but really, has it?<br>
+    I mean, while it is true that a ton of
+    people are using web components, not everyone is.<br>
+    And if they&#39;re truly as revolutionary as they seem, why isn&#39;t
+    like absolutely everyone using them, like every single web site?<br>
+    KEVIN SCHAAF: OK, so to explain that, let&#39;s
+    pause for a second to talk about this concept we have on the Polymer team called a weirdness budget.<br>
+    STEVE
+    ORVELL: Right.<br>
+    So when you&#39;re learning something new, there&#39;s really only so many kind of weird new
+    concepts you can deal with at one time.<br>
+    If there&#39;s too many things that really aren&#39;t compatible with
+    your way of thinking or the way you&#39;re doing something, it starts to feel kind of unwieldy and confusing, and
+    you&#39;re likely to just punt on the whole idea.<br>
+    KEVIN SCHAAF: So take the electric car for an example.<br>
+    So
+    the novel, new thing about the electric car is that you never need to go to the gas station.<br>
+    You just have to
+    learn one new thing.<br>
+    You have to learn to plug it in at night.<br>
+    That&#39;s it.<br>
+    But in addition to that, say
+    the car had a bunch of other weird things about it, like only three wheels and funky doors and, like, only one seat.<br>
+    The
+    novel benefit of not needing gas would be lost because of all the other weird things about it.<br>
+    STEVE ORVELL:
+    Yeah.<br>
+    I&#39;m not sure I&#39;d buy that car.<br>
+    And sometimes that&#39;s how we feel it&#39;s been with Polymer
+    and Web Components.<br>
+    While that original novel feature, that single standard interoperable component model has
+    been really compelling, and a ton of developers have been really successful using it, we think Web Components have
+    been held back from their full potential, because, for some people at least, they&#39;ve exceeded that weirdness
+    budget a bit.<br>
+    KEVIN SCHAAF: So first and foremost were the polyfills.<br>
+    At the beginning, you needed polyfills
+    to do anything with Web Components on every browser, and not just one polyfill, but a bunch of them, one for each
+    big feature of Web Components.<br>
+    STEVE ORVELL: Yeah, and these weren&#39;t simple polyfills either.<br>
+    Some pretty
+    fundamentally changed how the browser worked.<br>
+    KEVIN SCHAAF: So having to load polyfills just to do anything kind
+    of felt weird.<br>
+    STEVE ORVELL: Yeah, and early on, using Polymer at least felt like the only way to build Web
+    Components.<br>
+    And this was because those polyfills were pretty tightly coupled to Polymer.<br>
+    And that made it feel
+    like using Web Components was just like siloing yourself in another framework.<br>
+    KEVIN SCHAAF: Right.<br>
+    And the
+    entire purpose the Web Components was to break down these silos so that you didn&#39;t have to be stuck in a silo
+    when you chose a framework.<br>
+    STEVE ORVELL: Right so being forced to, or feeling like you were forced to, use a
+    library like Polymer just to use Web Components also kind of felt weird.<br>
+    KEVIN SCHAAF: And then, when we started
+    out on Web Components, a package manager called Bower was popular at the time and seemed like a natural fit for
+    distributing client-side code, like Web Components.<br>
+    STEVE ORVELL: Right, right.<br>
+    But in the meantime, NPM has
+    really become the de facto standard way to distribute JavaScript for both client and server code.<br>
+    And having you
+    get your dependencies out of Bower became kind of a drag.<br>
+    KEVIN SCHAAF: Yeah, so having to deal with two package
+    managers, NPM and Bower, just also felt weird for developers.<br>
+    STEVE ORVELL: And then there is HTML Imports.<br>
+    So
+    it was a really good idea, but it never really panned out standards-wise.<br>
+    This is how those guys from the future
+    envisioned we&#39;d all load our Web Components, with a platform-based loader for HTML, JavaScript, and CSS.<br>
+    KEVIN
+    SCHAAF: But then once JavaScript modules started becoming popular, it became clear that we couldn&#39;t have two
+    different loaders in the browser, one for HTML, one for JavaScript.<br>
+    And so over time, the HTML Import spec was
+    abandoned.<br>
+    And because of that, all of the standard tools that we all use, like bundlers and transpilers and
+    editors, they never really adapted to dealing with HTML Imports.<br>
+    STEVE ORVELL: Right.<br>
+    So over time, at least,
+    using HTML imports also started to feel weird.<br>
+    KEVIN SCHAAF: So while Web Components have been objectively
+    successful, there have been some legitimate reasons for developers to hold off using them.<br>
+    And that&#39;s been a
+    big focus of the Polymer team over the last couple of years, to eliminate the weirdness around Web Components so
+    that every web application can start taking advantage of this standard interoperable component model.<br>
+    STEVE
+    ORVELL: Right.<br>
+    So first let&#39;s take a look at the polyfills.<br>
+    Now, the great news here is that you almost
+    don&#39;t need them at all today.<br>
+    Last year, both Chrome and Safari shipped a standard version of custom elements
+    in Shadow DOM.<br>
+    And now, Firefox has implementations behind a flag and will ship pretty soon.<br>
+    So you need zero
+    polyfills for both Chrome and Safari and, soon, Firefox.<br>
+    And for older browsers or other ones, the polyfills now
+    use feature detection to load just what&#39;s needed.<br>
+    KEVIN SCHAAF: And then the other thing is that as of
+    Polymer 2.0 release at last year&#39;s Google I/O, the polyfills are now totally separate from Polymer and work
+    transparently behind the scenes.<br>
+    So now, Polymer is just an implementation detail of your Web Component.<br>
+    Users
+    of your component use it just like they would any other HTML element and don&#39;t need to know anything about
+    Polymer, the way it was kind of always supposed to be.<br>
+    And today, Web Components are made not just with
+    Polymer.<br>
+    You can make web components with libraries like Angular and Ionic and Glimmer.<br>
+    And all of those
+    components can work on the same page through the power of that interoperable component model.<br>
+    STEVE ORVELL: So we&#39;ve
+    come a pretty long way towards reducing that weirdness around using Web Components.<br>
+    But there&#39;s still these
+    two other things that have made Web Components built with Polymer feel kind of weird.<br>
+    And that&#39;s been the
+    focus of our team for around the past year.<br>
+    KEVIN SCHAAF: All right, and today, we&#39;re excited to announce the
+    release of Polymer 3.0.<br>
+    [APPLAUSE] STEVE ORVELL: With Polymer 3.0, we&#39;re building Web Components built with
+    Polymer into the mainstream.<br>
+    Now, our boss, Matt, who&#39;s right there, he really likes flames.<br>
+    He insists on
+    putting them in every presentation.<br>
+    So we slipped them in right there.<br>
+    KEVIN SCHAAF: Did you like the flamey
+    Web Components?<br>
+    OK.<br>
+    STEVE ORVELL: OK.<br>
+    KEVIN SCHAAF: All right.<br>
+    STEVE ORVELL: Good.<br>
+    KEVIN SCHAAF: So
+    the first big change in Polymer 3.0 is that the Polymer library and all of the elements we produce are now being
+    published on NPM.<br>
+    So this means you&#39;ll just NPM-install them, like you do any other dependency in your
+    project, no more contending with a different package manager just to use Polymer in Web Components.<br>
+    STEVE ORVELL:
+    Next, we&#39;re moving from HTML Imports to JavaScript modules.<br>
+    And this is going to match how the mainstream of
+    code is being written today in the community.<br>
+    But we&#39;re not just authoring in modules.<br>
+    We&#39;re also
+    publishing our packages to NPM as JavaScript modules.<br>
+    KEVIN SCHAAF: And this is because as of today&#39;s release
+    of Firefox&#39;s 60-- we just tested it this morning-- the current version of every major browser natively supports
+    loading JavaScript modules in the browser, all four of them.<br>
+    So native modules let you run the code that you
+    write exactly as you wrote it with no bundling or transpiling or source maps needed during development, which is a
+    awesome productivity boost during development, to just be able to load and refresh your code in the browser.<br>
+    STEVE
+    ORVELL: Yeah, it&#39;s totally awesome.<br>
+    But there&#39;s just one thing we need to do to make this possible, and
+    that&#39;s to convert the module specifiers we use to URLs.<br>
+    Because the browsers really only to understand
+    URLs.<br>
+    And the convention in NPM and really the entire JavaScript ecosystem is to load dependencies by package
+    name, not by URL.<br>
+    And Polymer is going to follow this convention.<br>
+    We&#39;re not going to be weird there.<br>
+    So
+    to make those important loadable in the browser, we need to transform those module specifiers to URLs.<br>
+    KEVIN
+    SCHAAF: OK, so how do we do this?<br>
+    Well, we&#39;ve updated the Polymer CLI tools to do just that simple
+    transformation on your source code on the fly, from module specifiers using package names to URLs.<br>
+    So let&#39;s
+    take a look at this in action.<br>
+    So here, we&#39;re loading our shop demo app using the Polymer depth server.<br>
+    So
+    during development, you&#39;re loading the exact same code that you wrote in your editor-- all the same files right
+    here, no bundling during development.<br>
+    The only change is that the server converts module specifiers from package
+    names to URLs.<br>
+    So you see that, the just top couple of lines there, those are converted on the fly to URLs, which
+    makes the debugging experience great.<br>
+    You can just edit it and refresh.<br>
+    That breakpoint right there is on the
+    exact same line as it would be in our editor.<br>
+    So Polymer still ships with this great edit refresh development
+    experience right out of the box.<br>
+    STEVE ORVELL: Right.<br>
+    Now for those of you who really like developing in HTML,
+    stay tuned, because we&#39;re going to have more to say on that later in the talk.<br>
+    But the other benefit of this
+    change, moving from HTML ports to JavaScript modules, is that code built with Polymer also just fits right into the
+    other popular tools in the community, tools that understand modules, like TypeScript and Webpack and Rollup.<br>
+    And
+    of course, you can continue to use the Polymer CLI.<br>
+    You can choose whatever tool works best for you and your
+    team.<br>
+    KEVIN SCHAAF: So in Polymer 3.0, we&#39;ve held the API stable and only focus on this format change, from
+    HTML imports in Bower to JavaScript modules in NPM.<br>
+    So Polymer 3.0 has all the same stuff as Polymer 2.0, just in
+    a slightly different form.<br>
+    So let&#39;s take a look at what this change practically means.<br>
+    Up until now in
+    Polymer, we defined single-file components using HTML.<br>
+    So first, you&#39;d import dependencies, like the Polymer
+    base class here.<br>
+    So we&#39;re using an HTML import, a link rel import tag to import that.<br>
+    And then, you&#39;d
+    use a DOM module element to associate your template&#39;s class with-- for your custom element with the
+    template.<br>
+    And then, you&#39;d register the element with the browser using the native custom elements register--
+    or custom elements-defined API.<br>
+    So this is what kind of a typical single-file component looked like in Polymer
+    2.0 all in HTML.<br>
+    STEVE ORVELL: And in Polymer 3.0, we&#39;re defining single-file components using JavaScript
+    instead of HTML.<br>
+    So to do that, you first just make a standard module.<br>
+    You import your dependencies directly
+    from NPM using the browser&#39;s native import syntax.<br>
+    Define your class.<br>
+    That part&#39;s the same.<br>
+    But
+    then, here&#39;s a change.<br>
+    You implement a getter that returns your HTML template.<br>
+    And the change here is that
+    you use this HTML function provided by Polymer to convert the string into the element that Polymer expects.<br>
+    Otherwise,
+    the syntax hasn&#39;t changed.<br>
+    And we use the same platform API customElements define that we did before.<br>
+    And
+    that&#39;s really all there is to it.<br>
+    Pretty standard, nothing weird here.<br>
+    KEVIN SCHAAF: All right, so this
+    may sound like a big change.<br>
+    But providing our users a smooth migration path between major versions has always
+    been a really strong focus on the Polymer Project.<br>
+    And so again, I just want to reiterate with Polymer 3.0, we&#39;ve
+    held the API stable and only focus on this format change, from HTML Imports in Bower to JavaScript modules in
+    NPM.<br>
+    STEVE ORVELL: Yeah, and to help users migrate their existing code, we&#39;re providing a tool called the
+    Polymer modulizer.<br>
+    It converts all imports to JavaScript modules automatically and also generates the package
+    JSON you need to install dependencies from NPM based on what you were previously using in Bower.<br>
+    KEVIN SCHAAF:
+    OK.<br>
+    So that sounds like a tall order, an automatic migration between two versions.<br>
+    So next, let&#39;s take a
+    look at the modulizer in action by going to our shop demo application that was written in HTML Imports and convert
+    that to modules.<br>
+    So this is the shop demo application.<br>
+    I&#39;m going to reload it here in the browser.<br>
+    You
+    can see in the dev tools, we&#39;re loading all of our components there using HTML Imports.<br>
+    STEVE ORVELL: That&#39;s
+    the 2.0 version.<br>
+    KEVIN SCHAAF: Right.<br>
+    So if we pull up the shop app, the main component for the application in
+    our editor, you can see all the dependencies are being imported using HTML imports.<br>
+    The template is right there
+    in the HTML.<br>
+    And then, you can see that the class is extending from the Polymer element base class that&#39;s
+    pulled directly off of the global.<br>
+    Because with HTML Imports, we didn&#39;t have any scoping.<br>
+    Everything had
+    to go under the global.<br>
+    So now if we run the modulizer command on our app, that&#39;s going to go through,
+    convert all of those HTML files, read those in, output JavaScript modules in their place.<br>
+    So here, we can open
+    that same shop app component.<br>
+    You can see all the imports are now JavaScript module imports.<br>
+    And the base
+    class is being imported from the module that provides it.<br>
+    We&#39;re defining our class the same way.<br>
+    And then,
+    here is that-- the template being encoded right there in JavaScript using the HTML function.<br>
+    As Steve said, the
+    modulizer also generates your package JSON based on all the dependencies you were previously using in Bower.<br>
+    So
+    we can just go to the console here, NPM install, our new NPM-based application, run the dev server.<br>
+    Now, we
+    switch back to the browser.<br>
+    I&#39;m going to hit Refresh right here.<br>
+    You&#39;ll see that, automatically, all
+    of these modules have been converted.<br>
+    We&#39;re now loading them using the native module loader in the
+    browser.<br>
+    And everything basically works.<br>
+    There may be a few things that the modulizer doesn&#39;t
+    automatically convert still that you might have to hand-tweak.<br>
+    But as you can see, the majority of the migration
+    work is automated.<br>
+    [APPLAUSE] STEVE ORVELL: Yeah, so that&#39;s a pretty awesome tool.<br>
+    And we want to thank
+    all of the users and companies in the community that helped us make that happen.<br>
+    And especially, we want to give
+    a big shout-out to Vaadin that helped us a lot.<br>
+    They have a widget set based using web components that&#39;s
+    really great.<br>
+    You should definitely check that out.<br>
+    So modulizer is available today on NPM.<br>
+    It&#39;s still
+    in pretty active development.<br>
+    It already automates most everything, as you just saw, but there are a few things
+    you need to do.<br>
+    You should definitely check it out, and we&#39;d love your feedback.<br>
+    KEVIN SCHAAF: And
+    finally, along with this change, we made sure that webcomponents.org, the one-stop shop for the ecosystem of
+    reusable web components, is being updated to host elements distributed via NPM.<br>
+    It was previously Bower.<br>
+    And
+    we&#39;re encouraging the entire community of Web Component developers to go through this migration to get them onto
+    Bower and modules, the same as the rest of the community, and get them published on webcomponents.org as well.<br>
+    STEVE
+    ORVELL: So in this latest release, we really feel like we&#39;re removing all of the weirdness around using Polymer
+    and Web Components.<br>
+    Using Polymer 3.0, you can build and distribute web components that are truly mainstream.<br>
+    KEVIN
+    SCHAAF: And when you&#39;re building a web application, using a web component is just like you would any other
+    dependency.<br>
+    It will fit seamlessly into your workflow.<br>
+    STEVE ORVELL: Polymer 3.0 and most of the custom
+    elements that the Polymer team maintains are available today on NPM.<br>
+    Install them just like any other NPM
+    dependency, and you&#39;ll be off to the races.<br>
+    KEVIN SCHAAF: All right, so that&#39;s where we&#39;re at with
+    web components and Polymer today.<br>
+    And that future that Dimitri and Alex talked about back in 2012 really is
+    coming true.<br>
+    So where does that put us today with the Polymer Project?<br>
+    Where do we go from here?<br>
+    STEVE
+    ORVELL: Well, since we&#39;re holding the API stable in Polymer 3.0, as we said, that release is really mostly about
+    getting our existing users kind of into the mainstream.<br>
+    But we&#39;ve always really wanted Polymer to be just a
+    really thin sprinkling of sugar over the native platform APIs.<br>
+    And having completed all that work, we&#39;re
+    really returning to that core vision.<br>
+    So we&#39;ve been working on a whole new generation of products that are
+    thinner and lighter and more loosely coupled.<br>
+    And we see these as the future of the Polymer Project.<br>
+    So let&#39;s
+    take a look at what we&#39;ve been working on.<br>
+    KEVIN SCHAAF: All right, so the first thing that we did is take a
+    hard look at improving the base class that we use to make Web Components.<br>
+    So the rendering and data binding parts
+    of Polymer&#39;s base class have really been unchanged since the 1.0 release of years ago.<br>
+    And since then, we&#39;ve
+    had a lot of ideas kind of stacking up on how to make it smaller and use more platform features and focus on how
+    developers are actually building applications today.<br>
+    STEVE ORVELL: So to do this, we separated out kind of the
+    lowest part of the smallest part of the Polymer library.<br>
+    It&#39;s a roughly two-kilobyte layer that lets you
+    declare an element&#39;s property API and keep it in sync with its attributes and react to changes.<br>
+    And we really
+    see this as a common substrate that any element needs, regardless of what rendering model is being used.<br>
+    KEVIN
+    SCHAAF: And then, in place of Polymer&#39;s legacy template and data mining system, we layered on a new library
+    called lit-html that we&#39;ve been developing over the past year or so.<br>
+    lit-html a lightweight rendering library
+    based on JavaScript string literals and the platform&#39;s template elements.<br>
+    So we took those two platform
+    features and kind of smooshed them together into this rendering library.<br>
+    It&#39;s less than three kilobytes
+    today.<br>
+    But because it&#39;s based on new and some upcoming standards that we&#39;re going to talk about, even
+    that can mostly melt away in the future.<br>
+    STEVE ORVELL: We&#39;re calling this new base class LitElement.<br>
+    So
+    let&#39;s take a look at it in action.<br>
+    So we start by just making a standard JavaScript module.<br>
+    We import
+    LitElement there from NPM using-- and its HTML tag.<br>
+    Then, we use our standard pattern.<br>
+    We make a class that
+    extends LitElement.<br>
+    We declare our element&#39;s property API.<br>
+    Here, we&#39;re declaring a first, last, and
+    type properties.<br>
+    Users can set those either as attributes in HTML or as properties in JavaScript.<br>
+    KEVIN
+    SCHAAF: This is pretty similar to a Polymer element so far.<br>
+    STEVE ORVELL: Yeah.<br>
+    Yeah.<br>
+    Yeah.<br>
+    Then, we use
+    their render method.<br>
+    And this is where LitElement makes use of lit-html and its HTML malfunction.<br>
+    It takes a
+    string containing static HTML and embedded JavaScript expressions describing where the dynamic value should be
+    set.<br>
+    Behind the scenes, it&#39;s converted to a template element with some information about where those dynamic
+    spots are.<br>
+    LitElement renders this content to the element&#39;s Shadow DOM.<br>
+    And then, that render method is
+    actually called whenever any of the elements&#39; properties change.<br>
+    And lit-html, behind the scene, keeps things
+    fast by ensuring that the static content is rendered only once and that the dynamic parts are updated just as
+    needed.<br>
+    Finally, we call custom elements defined, just like we always do, and that&#39;s all there is to it.<br>
+    KEVIN
+    SCHAAF: So you may notice that this LitElement uses the functional reactive pattern that was popularized by React
+    and JSX.<br>
+    But since we&#39;re writing standard JavaScript here, the issue malfunction is a standard part of-- we&#39;re
+    using tagged template literals which is a standard part of the platform.<br>
+    So we have the full power of the
+    language, but we don&#39;t have to compile the code to make it work in the browser.<br>
+    STEVE ORVELL: Right.<br>
+    And
+    we see LitElement as a lightweight next-generation replacement for Polymer 3.0&#39;s Polymer element.<br>
+    It&#39;s
+    just about five kilobytes.<br>
+    That&#39;s around a third the size.<br>
+    But it has just what you need for making
+    elements that leverage unidirectional data flow.<br>
+    KEVIN SCHAAF: And because they&#39;re web components, you can,
+    of course, mix and match elements made with LitElement with elements you made with Polymer 3.0 or any other Web
+    Components.<br>
+    STEVE ORVELL: All right, both lit-html and LitElement are available today on NPM, and you can start
+    using them.<br>
+    KEVIN SCHAAF: OK, so with LitElement, we have a solid new base class for building custom elements and
+    apps out of components.<br>
+    But when you&#39;re building a web application, you don&#39;t have to build all the
+    components yourself, right, Steve?<br>
+    STEVE ORVELL: No, that would be kind of crazy.<br>
+    So that brings us to our
+    next product, a new element set.<br>
+    So from the earliest days of the Polymer Project, we&#39;ve always provided a
+    high quality library of UI components to help you get started building rich user interfaces out of Web
+    Components.<br>
+    KEVIN SCHAAF: And yesterday, Google announced a new iteration of material design here at I/O. It is
+    focused on themability, and our team is making a new set of elements expressing this new design language called
+    Material Web Components.<br>
+    These elements will be replacing the Polymer team&#39;s paper elements, which are based
+    on an older version of the material design.<br>
+    STEVE ORVELL: Yeah.<br>
+    And for this new element set, we&#39;ve teamed
+    up with the material design engineering team here at Google that&#39;s in charge of supporting all of the platforms
+    that Google builds for.<br>
+    And this is going to ensure that the new set is automatically kept in sync with the
+    latest material design guidelines.<br>
+    KEVIN SCHAAF: So the new set it actually built using LitElement that we just
+    talked about.<br>
+    But again, that&#39;s just a implementation detail under the scenes.<br>
+    From the user&#39;s point
+    of view, it&#39;s just a Web Component.<br>
+    STEVE ORVELL: All right, we have a preview of the material web components
+    available on GitHub today.<br>
+    Some of them are published now to NPM, but they&#39;re our work in progress.<br>
+    And we
+    hope to iterate quickly and have them all ready very soon.<br>
+    KEVIN SCHAAF: OK, so we have a solid new base class
+    with LitElement and a new element set with material Web Components.<br>
+    The last product ties all of these things
+    together into the end-to-end app-building experience.<br>
+    And today, we&#39;re announcing a new PWA starter kit.<br>
+    STEVE
+    ORVELL: It has everything you need to build scalable, high-performance, progressive web apps right out of the box,
+    using all of this platform features.<br>
+    KEVIN SCHAAF: So of course, we&#39;re using Web Components for factoring the
+    UI, and again, those are built using LitElement, our new base class, uses service worker for offline storage.<br>
+    It
+    uses the PRPL pattern for efficiently serving your application.<br>
+    And we&#39;re integrating Redux for top-down
+    scalable state management.<br>
+    STEVE ORVELL: The kit comes with several different starter templates and has tons of
+    documentation for ramping up.<br>
+    There&#39;s zero config commands for building, unit testing, screenshot testing,
+    and deploying.<br>
+    All that&#39;s included.<br>
+    KEVIN SCHAAF: So you can get going with the PWA starter kit by cloning
+    that GitHub repo.<br>
+    And there&#39;s a whole wiki in there that tells you how to get started.<br>
+    But also, Monica
+    Dinculescu from our team is going to be giving a whole talk on that coming up in just an hour after this talk, at
+    3:30 on stage three, so you should definitely go check that out.<br>
+    STEVE ORVELL: Yeah, you should definitely check
+    that out.<br>
+    KEVIN SCHAAF: She&#39;s an amazing speaker.<br>
+    OK.<br>
+    STEVE ORVELL: All right, so to recap-- we went
+    over a lot pretty fast there.<br>
+    Polymer 3.0 is bringing the Polymer Web Components ecosystem into the
+    mainstream.<br>
+    KEVIN SCHAAF: And with LitElement, Material Web Components, and PWA starter kit, building web
+    applications with Web Components is easier than ever.<br>
+    STEVE ORVELL: OK, but remember, the Polymer Project&#39;s
+    mission is not just to build tools on top of the platform but also to evolve the platform, to make it more capable
+    and ergonomic and help people solve real-world problems.<br>
+    KEVIN SCHAAF: OK, so we have 14 minutes and 37
+    seconds.<br>
+    We&#39;re going to finish up with the lightning round through a bunch of new platform API and features
+    that the Polymer team is helping shape and providing feedback on in the standards process.<br>
+    OK, here we go.<br>
+    STEVE
+    ORVELL: All right, so first up we have CSS Shadow Parts.<br>
+    This is a proposal that provides a first-class solution
+    for theming web components.<br>
+    KEVIN SCHAAF: So we&#39;ve talked about how Shadow DOM provides styling
+    encapsulation.<br>
+    It protects the inside and outside of the Shadow DOM from being accidentally styled.<br>
+    STEVE
+    ORVELL: However, sometimes, you want to style elements inside the Shadow DOM from the outside, and the classic case
+    is applying themes.<br>
+    For example, you might want a button to have rounded corners or an input to look special when
+    it&#39;s focused.<br>
+    KEVIN SCHAAF: And while you&#39;ve previously been able to do this using CSS custom
+    properties-- that&#39;s kind of what we&#39;ve done up until now-- there wasn&#39;t that way to style any CSS
+    property on an element in the ShadowRoot.<br>
+    You could only style the one that you exposed to your custom property
+    API.<br>
+    STEVE ORVELL: Right.<br>
+    And this is where CSS shadow parts comes in.<br>
+    So it&#39;s actually modeled on the
+    way the platform already works.<br>
+    Let&#39;s take the native input element, for example.<br>
+    It has a placeholder
+    attribute that shows a value when you haven&#39;t typed anything.<br>
+    It&#39;s usually used to tell the user what to
+    type.<br>
+    KEVIN SCHAAF: So this is a nice feature.<br>
+    But often, developers want to be able to style the placeholder
+    to make it match the theme of their website.<br>
+    and what you may not know is that the native input is actually
+    implemented in the browser using Shadow DOM.<br>
+    It has been for years.<br>
+    And the rendering of the placeholder
+    inside that element, that rendering that says, &quot;enter value,&quot; that&#39;s actually just an element in the
+    native input&#39;s Shadow DOM.<br>
+    And the platform exposes a special colon, colon placeholder pseudo-element in CSS
+    that you can select on the input to style it.<br>
+    We can make it orange and centered.<br>
+    And we can do that without
+    the input having to leak other implementation details of how it&#39;s implemented.<br>
+    STEVE ORVELL: Aha.<br>
+    That&#39;s
+    the problem that we&#39;re trying to solve.<br>
+    We&#39;re trying to theme custom elements that use Shadow DOM So let&#39;s
+    say, for example, you had a slider element called mySlider, and you want to allow users to customize the way the
+    thumb looks.<br>
+    That&#39;s the thing you drag left or right to set the value.<br>
+    KEVIN SCHAAF: So Shadow Parts
+    introduces a new part syntax in CSS that we can use to select items in the ShadowRoot.<br>
+    So here, we can select
+    colon, colon part on the mySlider and pass the thumb as the thing we want to select in there, and give it a custom
+    style.<br>
+    So we could make the thumb orange, if that&#39;s our theme for our website.<br>
+    And so this gives us the
+    power to define pseudo-elements for our own Web Components, just like the native platform has always done for its
+    built-in elements.<br>
+    STEVE ORVELL: Right.<br>
+    And to do that, all the developer of that mySlider element needs to do
+    to expose the thumb as a stylable pseudo-element is to add a part attribute to the right-- with the name you want to
+    that right DOM node in your ShadowRoot.<br>
+    And what&#39;s great about this is the developer decides exactly what
+    styling is encapsulated in the Shadow DOM and what&#39;s themable from the outside.<br>
+    KEVIN SCHAAF: So the CSS
+    working group has already agreed to advance this syntax, and it&#39;s being implemented in Chrome right now.<br>
+    And
+    we really think that CSS shadow parts is going to unlock generalized theming for Web Components that&#39;s kind of
+    been missing up until now.<br>
+    STEVE ORVELL: Yeah.<br>
+    You can go check out the draft spec here.<br>
+    And Monica wrote
+    up a really nice explainer on her blog that you can check out there too.<br>
+    KEVIN SCHAAF: OK, so next up is a big
+    advancement for custom elements, which is the ability to scope new HTML tag names to a specific part of the
+    page.<br>
+    So remember, custom elements allows us to associate a custom element class with a HTML tag name in the
+    browser.<br>
+    STEVE ORVELL: Right.<br>
+    However, up until now, custom elements were defined globally for the entire
+    page.<br>
+    Now in practice, really, this has been mostly fine.<br>
+    But it can sometimes be a problem.<br>
+    And to see
+    how, let&#39;s walk through a little example real quick.<br>
+    So say you&#39;re on a big team building a big
+    application, and you&#39;re responsible for the contact view.<br>
+    You see, you find a fancy button component you
+    think would be great.<br>
+    You put it in right there.<br>
+    KEVIN SCHAAF: So let&#39;s say that I&#39;m on a different
+    team, and I&#39;m responsible for the detail view.<br>
+    And my team finds a different fancy button that looks awesome.<br>
+    And
+    I want to use it in my component.<br>
+    And both of these components need to work in the same page.<br>
+    So since the
+    fancy button tag name can only be associated with one class-- right now in custom elements-- the browser won&#39;t
+    actually let you define two elements with the same name.<br>
+    So both teams would have to cooperate on picking the
+    same fancy button or name it differently or something like that right.<br>
+    STEVE ORVELL: Right.<br>
+    So let&#39;s take
+    a look at how custom element registries will help us address that problem.<br>
+    So with the custom element registries,
+    you&#39;ll just-- you&#39;ll import the class that you want to use.<br>
+    And then, you&#39;ll make a new custom
+    element registry.<br>
+    So previously, there were just one of these globally.<br>
+    Then, you can define that fancy dash
+    button tag name just in this registry, not the whole page.<br>
+    And then finally, you&#39;ll tell a ShadowRoot to use
+    just this registry for its scoped tree.<br>
+    So this way, the Contact View and the Detail View could each have their
+    own registry allowing you to use that same fancy dash button name but with different implementations on the same
+    page.<br>
+    KEVIN SCHAAF: So we think this addition is really going to help large organizations managing a lot of
+    complexity, a lot of dependencies in their application, adopt custom elements.<br>
+    The proposal got positive feedback
+    at a recent W3C meeting this year.<br>
+    And you can follow along on this GitHub issue and provide feedback on the
+    issues linked here.<br>
+    And actually for all the things we&#39;re talking about, go check out the issues and comment
+    on them and give them your use cases and feedback.<br>
+    That&#39;d be great.<br>
+    So with CSS shadow parts and custom
+    element registries, a couple of longstanding pain points are going to be addressed really nicely, making web
+    components easier to use.<br>
+    STEVE ORVELL: Yeah.<br>
+    Now next, we&#39;ll look at a couple of features that will
+    enhance the way that we load components in the browser.<br>
+    And first, we have a new browser feature called Package
+    Name Maps.<br>
+    And this will allow us to import JavaScript modules by name in addition to by your URL.<br>
+    So as we
+    mentioned earlier, JavaScript modules can only really be loaded by URLs, since browsers only really understand URLs
+    right now.<br>
+    But everyone uses package names.<br>
+    This provides a lot of flexibility, like the ability for NPM to
+    put the package just where it needs to be on disk.<br>
+    And frankly, it&#39;s just more convenient.<br>
+    But again, it
+    means that you need some kind of tool today to make them loadable in the browser.<br>
+    And wouldn&#39;t it be great if
+    you didn&#39;t have to do that?<br>
+    KEVIN SCHAAF: Right.<br>
+    That&#39;s the one thing that the Polymer tools during
+    development have to do is transform this.<br>
+    But that&#39;s where Package Name Maps comes in.<br>
+    So Package Name
+    Maps introduces a new JSON format that will be understood by the browser that maps module package names to URLs that
+    the browser can load.<br>
+    And the idea is that this would be generated by your package manager, like NPM or your CDN
+    that&#39;s providing your modules, whatever knows the location of all the modules.<br>
+    And you&#39;ll just tell the
+    browser where to load your package map.<br>
+    It might be something like this.<br>
+    The syntax is still kind of up in the
+    air.<br>
+    But then, you&#39;ll be able to use package names in all of your source code or your dependencies, and have
+    them load natively in the browser, just the way you would in node.<br>
+    STEVE ORVELL: So we&#39;re really excited
+    about how this is going to remove the need to use tooling to load your source in the browser.<br>
+    And we also see
+    this as a really big step forward for unifying the entire JavaScript community, both front end and server-side,
+    where packages can work out of the box in either context.<br>
+    There is an explainer for the proposal here on
+    GitHub.<br>
+    You can go check it out again.<br>
+    Please provide your feedback.<br>
+    That&#39;s how this stuff gets
+    done.<br>
+    KEVIN SCHAAF: So the next thing we&#39;re working on related to loading is HTML modules.<br>
+    So as we
+    mentioned earlier, HTML Imports kind of failed to catch on, mostly because they weren&#39;t designed to coordinate
+    with the JavaScript module loader in the browser that started kind of emerging at the same time and is actually now
+    shipped everywhere.<br>
+    STEVE ORVELL: Right.<br>
+    But a lot of our users, they really like using HTML to define
+    components.<br>
+    And there&#39;s pretty broad agreement in the W3C that supporting HTML as a way to define components
+    is still a really good idea.<br>
+    So we&#39;re helping to define a proposal for HTML modules.<br>
+    Now, this is a way to
+    load HTML but with the standard JavaScript module loader.<br>
+    The native module loader today only understands
+    JavaScript.<br>
+    But if HTML modules are implemented, that same loader would just load-- be able to load HTML.<br>
+    And
+    this really unlocks a lot of possibilities.<br>
+    The HTML could bring in the components template.<br>
+    And then, you
+    could use it in a script, please.<br>
+    Thank you.<br>
+    [GIGGLING] And that&#39;d be really easy.<br>
+    Use that template in
+    your component, just like that.<br>
+    Look a lot like HTML Imports does today but, you know, natively with the
+    JavaScript module loader-- with the modulator loader, then.<br>
+    KEVIN SCHAAF: Yeah.<br>
+    All right, so with HTML and
+    modules, we&#39;re really hopeful to get away to write single-file components that leverages the native parser, that
+    keeps HTML JavaScript-- or HTML and CSS in their native format without needing to encode them into JavaScript, which
+    feels kind of weird today.<br>
+    The proposal is being discussed on GitHub in this issue.<br>
+    We&#39;re still working
+    out a lot of the details.<br>
+    But we&#39;ve also created an experimental tool that you can check out right now to
+    help refine the design.<br>
+    It lets you write all modules in this specular format and then applies a [INAUDIBLE]
+    transform to convert them into JavaScript modules that can be loaded natively in the browser.<br>
+    So if you&#39;re
+    interested in this proposal or if you want to continue to write your components using HTML, you should definitely
+    check that out.<br>
+    STEVE ORVELL: Cool.<br>
+    All right.<br>
+    So package name apps and HTML modules are both going to make
+    loading components in the browser a lot more convenient.<br>
+    And that brings us to the last new browser feature that
+    we&#39;ll discuss.<br>
+    And that&#39;s HTML template instantiation.<br>
+    It&#39;s an extension to the existing template
+    element, but it adds API for updating dynamic parts of the DOM.<br>
+    So here&#39;s an example template with some
+    static elements.<br>
+    And you may not actually know this, but cloning a template like that is the fastest way to
+    create a tree of DOM.<br>
+    It&#39;s actually faster than creating elements imperatively, like many libraries do.<br>
+    But
+    in practice, of course, real applications need to update that DOM as well.<br>
+    So in this case, we probably wouldn&#39;t
+    put that name, Bob Smith, statically in a template like that, would we?<br>
+    KEVIN SCHAAF: Right.<br>
+    We&#39;d probably
+    fill that in from a variable that&#39;s loaded from a database or something.<br>
+    And we might need to update that
+    spot in the template later on.<br>
+    And really, there&#39;s been no way to do this built into the browser.<br>
+    In fact,
+    a lot of JavaScript libraries are focused on this one thing, like creating a tree of Dom and then updating it
+    dynamically.<br>
+    So template instantiation provides a way to tell the native template element where the dynamic parts
+    will be.<br>
+    So we&#39;ll be able to create what&#39;s called a template part and attach it to a spot in the template
+    to tell it where it can be updated.<br>
+    And so right here, this is where we wanted to update the name.<br>
+    And that&#39;s
+    the only part of this template that needs to be-- needs to be changed.<br>
+    Everything else is static.<br>
+    And we can
+    tell the browser about that ahead of time.<br>
+    And then, once we&#39;ve created parts in the template, there&#39;s a
+    new API called create instance on the template element.<br>
+    And this&#39;ll stamp a copy of the template, all of that
+    static content, into a thing that looks very similar to a document fragment that can be appended using the normal
+    Dom APIs But then, the cool thing is that the instance also knows about where all the dynamic parts are in that
+    template without having to walk through.<br>
+    We can just call getParts on the instance, and then, each part has a set
+    value API that we can call to update that part of the DOM.<br>
+    And then finally, you just call commit on the instance
+    to apply a batch of changes all at once.<br>
+    STEVE ORVELL: Cool.<br>
+    All right.<br>
+    This looks like a pretty low level
+    API, and it kind of seems like it&#39;s going to mostly be used in library code.<br>
+    But let&#39;s take a look at
+    what users are going to gain from adding this to the platform.<br>
+    So as we said earlier, it builds on top of the
+    existing template element, which is already the fastest way to create a static chunk of DOM.<br>
+    But by adding this
+    new part API, we think this will end up being the fastest way to update Dom as well.<br>
+    And this is because today,
+    any library that deals with rendering has to locate these dynamic spots in the DOM manually each time you create an
+    instance of the template.<br>
+    And if you&#39;re using a VDOM library, those have to walk through what could be a
+    pretty big chunk of static nodes just to find what needs updating.<br>
+    With Template Instantiation&#39;s getParts
+    API, you can just ask the browser for that list of spots that needs updating, without needing the runtime overhead
+    or the code to walk and find those spots.<br>
+    KEVIN SCHAAF: So another cool thing is that the API is proposed to have
+    batched updates built in.<br>
+    So logic to update the dynamic parts of a template and a component could be--
+    potentially be spread across multiple frames and committed in one batch, which is really cool, because a lot of
+    frameworks are experimenting with this concept of spreading work out across multiple frames.<br>
+    So this feature is
+    also being designed as low-level flexible primitives that can be incorporated into as many frameworks as
+    possible.<br>
+    For example, we think this will replace a large portion of what our new rendering library lit-html
+    implements, make that faster.<br>
+    But the Angular team has also been involved in the feedback process for this spec
+    and is interested in using template instantiation as well.<br>
+    STEVE ORVELL: Last, while the initial proposal for
+    template instantiation has an imperative API that we&#39;ve seen, it also paves the way for a future declarative
+    syntax for describing where those dynamic parts are just directly in the template&#39;s HTML.<br>
+    And that, together
+    with HTML modules, unlocks a potential future where components could be defined completely declaratively, which is
+    pretty cool.<br>
+    So template instantiation promises to make rendering Dom, a problem that every framer contends with,
+    faster, simpler, and with way less code.<br>
+    It&#39;s a really exciting proposal started by Apple.<br>
+    It has strong
+    support now from all the major browser vendors.<br>
+    It&#39;s still in very active development.<br>
+    You can check out
+    the explanation there.<br>
+    And that issue there has some of the latest discussion.<br>
+    KEVIN SCHAAF: All right, so you
+    guys still with us?<br>
+    All right, let&#39;s recap.<br>
+    All of these features that we talked about are going to help
+    make the browser way more capable and easier to use.<br>
+    So CSS shadow parts and custom element registries are going
+    to make those features, Shadow DOM and custom elements, a lot more robust.<br>
+    Package name apps and HTML modules let
+    us load our source code with fewer tools.<br>
+    HTML modules and template instantiation unlock declarative component
+    authoring, and template instantiation makes dynamic rendering way more [INAUDIBLE].<br>
+    And if we take all of these
+    features together, that means that we can rely more on the platform, more on the browser to get our job done, and
+    ship less code that has to run and be delivered over the network to our users.<br>
+    STEVE ORVELL: All right, so as
+    you can see, we have a pretty exciting next new round of features that will help evolve the platform, make it
+    better.<br>
+    All right, that&#39;s it for everything happening on the Polymer Project.<br>
+    So here the main takeaways,
+    what you should learn from today.<br>
+    KEVIN SCHAAF: All right, so Web Components are now a standard part of the web
+    platform that you can use in any app that you&#39;re making today.<br>
+    So if you&#39;re not using them or you haven&#39;t
+    checked them out, now is the time.<br>
+    There&#39;s no excuse.<br>
+    STEVE ORVELL: Polymer 3.0 is out today.<br>
+    It
+    provides a really smooth migration path for existing users to a more modern development workflow, authoring in
+    JavaScript modules, and using NPM for your dependencies.<br>
+    KEVIN SCHAAF: The Polymer Project is moving forward with
+    a new generation of products focused on improving the developer experience of building web apps with LitElement,
+    Material Web Components.<br>
+    And the PWA starter kit.<br>
+    STEVE ORVELL: And as you&#39;ve just seen in that lightning
+    round, we have a ton of great new platform features on the horizon that will make that experience even better.<br>
+    KEVIN
+    SCHAAF: All right, again, I&#39;m Stevin Schaaf.<br>
+    STEVE ORVELL: And I&#39;m Stevin Orvell.<br>
+    KEVIN SCHAAF: All
+    right, thank you for-- STEVE ORVELL: Thanks a lot.<br>
+    KEVIN SCHAAF: --listening.<br>
+    [APPLAUSE] [MUSIC PLAYING]
+</div>
+</body>
+</html>

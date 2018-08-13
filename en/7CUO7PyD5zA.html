@@ -62,15 +62,19 @@
     native web platform APIs to help us create components for structuring our applications and building reusable widgets.<br>
     And the components were built on a handful of new features in the browser.<br>
 
+    <!-- about custom elements -->
     STEVE ORVELL: The first feature they told us about was custom elements,
-    which let us extend HTML and make our own elements work the same way that the browser's built-in ones
-    do, like inputs and buttons.<br>
-    And this meant custom elements would work anywhere the web works, regardless of how
-    you're building your app.<br>
-    KEVIN SCHAAF: Next, Shadow DOM let custom elements hide their rendering so that you
-    could create complex UI in a component that was fully encapsulated, including its styling, so you no longer had to
-    contend with this global soup of CSS and come up with conventions on your team to avoid stomping on each other's
-    selectors, that sort of thing.<br>
+    which let us extend HTML and make our own elements work the same way that the browser's built-in ones do, like inputs and buttons.<br>
+    And this meant custom elements would work anywhere the web works, regardless of how you're building your app.<br>
+
+    <!-- Shadow DOM -->
+    KEVIN SCHAAF:
+    Next,
+    Shadow DOM let custom elements hide their rendering so that you could create complex UI in a component that was fully encapsulated,
+    including its styling,
+    so you no longer had to contend with this global soup of CSS and come up with conventions on your team to avoid stomping on each other's selectors,
+    that sort of thing.<br>
+
     STEVE ORVELL: And last, they proposed a new way to load those custom element
     definitions called html imports and the rendering for your component would just be described declaratively in html
     email and then loaded and parsed natively by the browser.<br>
